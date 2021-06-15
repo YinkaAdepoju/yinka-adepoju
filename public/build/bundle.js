@@ -292,7 +292,6 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			h1.textContent = `Hello ${/*name*/ ctx[0]}!`;
     			add_location(h1, file, 4, 0, 41);
     		},
     		l: function claim(nodes) {
@@ -323,7 +322,6 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("App", slots, []);
-    	let name = "world";
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
