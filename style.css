@@ -56,15 +56,24 @@ video::-webkit-media-controls-current-time-display {
 }
 
 
-.flex-container {
-    display: flex;
+.flex-child {
+  border: 4px solid yellow;
+}
+.flex-child:last-child {
+  margin-top: 20px;
 }
 
-.flex-child {
-    flex: 1;
-    border: 4px solid yellow;
-}  
+@media only screen and (min-width: 1024px) {
+  .flex-container {
+    display: flex;
+  }
 
-.flex-child:first-child {
-    margin-right: 20px;
-} 
+  .flex-child {
+    flex: 1;
+  }
+
+  .flex-child:last-child {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
